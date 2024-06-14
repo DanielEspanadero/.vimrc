@@ -107,10 +107,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Configuración de Tagbar
 nmap <F8> :TagbarToggle<CR>
 
-" Información del usuario
-let g:user42 = 'molasz-a'
-let g:mail42 = 'molasz-a@student.42barcelona.com'
-
 " Mapeo del líder
 let mapleader = "\\"
 nnoremap <leader>\ ``
