@@ -9,7 +9,7 @@ set encoding=UTF-8         " Establece la codificación de caracteres a UTF-8
 set number                 " Muestra números de línea
 set relativenumber         " Muestra números relativos de línea
 set cursorline             " Resalta la línea actual
-set cursorcolumn           " Resalta la columna actual
+"set cursorcolumn           " Resalta la columna actual
 set hlsearch               " Resalta las coincidencias de búsqueda
 set incsearch              " Muestra resultados de búsqueda a medida que se escribe
 set showmatch              " Resalta los pares de paréntesis
@@ -130,7 +130,29 @@ nnoremap <leader>z :Goyo<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-
-
 " Mapeo para abrir terminal horizontalmente
 nnoremap <leader>c :sp<CR>:term<CR>
+
+" Desactivar las flechas de dirección en modo normal, inserción y visual
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+vnoremap <Up> <Nop>
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+
+" Mapeo para abrir la terminal con la letra 'e'
+nnoremap <silent> e :botright terminal<CR>
+
+
+
+
+
