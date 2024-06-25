@@ -65,6 +65,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'preservim/nerdtree'         " Explorador de archivos
     Plug 'Xuyuanp/nerdtree-git-plugin'" Plugin de Git para NERDTree
     Plug 'vim-airline/vim-airline'    " Línea de estado mejorada
+    Plug 'vim-airline/vim-airline-themes'  " Temas para vim-airline
     Plug 'tpope/vim-commentary'       " Facilita comentar líneas de código
     Plug 'dense-analysis/ale'         " Linter y fixer de código
     Plug 'preservim/tagbar'           " Visualiza las tags del código
@@ -76,7 +77,6 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     Plug 'junegunn/limelight.vim'     " Resaltado del texto enfocado
     Plug 'ryanoasis/vim-devicons'     " Iconos de archivo en Vim
     Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Cliente de lenguaje de próxima generación
-
 
     " Cierra el bloque de configuración de complementos
     call plug#end()
@@ -139,10 +139,10 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+"inoremap <Up> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Left> <Nop>
+"inoremap <Right> <Nop>
 
 vnoremap <Up> <Nop>
 vnoremap <Down> <Nop>
@@ -152,7 +152,7 @@ vnoremap <Right> <Nop>
 " Mapeo para abrir la terminal con la letra 'e'
 nnoremap <silent> e :botright terminal<CR>
 
-
-
-
+" Configuración de vim-airline para mostrar pestañas
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
